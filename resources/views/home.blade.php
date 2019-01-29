@@ -19,6 +19,7 @@
           <ul>            
             <li><a href="admin">Admin</a></li>
             <li><a href="form">Create Campaign</a></li>
+            <li><a href="add_email">Add email</a></li>
          </ul>
         </div>
         </div>

@@ -5,16 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
+use Illuminate\Mail\Mailable;
+
 
 class mailController extends Controller
 {
 	
     function send(Request $request) {
     	$data= array(
-         'email'=> $request->email,
+          
          'subject'=>$request->subject,
          'body'=>$request->body
          );
+        
         
         
     	Mail::to('aneeshabhatt99@gmail.com')->send(new SendMail($data));

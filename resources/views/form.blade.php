@@ -45,7 +45,7 @@
             </div>
             <div class="col-75">
             <select id="email" name="E mail">
-                <option value="">Select email</option>
+                <option value="email">All</option>
             @foreach($emails_list as $email)
             <option value="{{$email->email}}">{{$email->email}}</option>
             @endforeach
