@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use App\Mail\SendMail;
 use Illuminate\Mail\Mailable;
+use App\add_emails;
+use Illuminate\Support\Facades\Input;
 
 
 class mailController extends Controller
@@ -18,9 +20,11 @@ class mailController extends Controller
          'body'=>$request->body
          );
         
+         $user = new add_emails;
+          $user->email = Input::get("email");
+          
         
-        
-    	Mail::to('aneeshabhatt99@gmail.com')->send(new SendMail($data));
+    	Mail::to($request->E_mail)->send(new SendMail($data));
         return back( )->with('success','Mail has been sent');
         
     }
