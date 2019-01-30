@@ -15,13 +15,13 @@ class mailController extends Controller
 	
     function send(Request $request) {
     	$data= array(
-          
+          'checkbox'=>$request->checkbox,
          'subject'=>$request->subject,
          'body'=>$request->body
          );
         
          $user = new add_emails;
-          $user->email = Input::get("email");
+         $user->email = Input::get("email");
            
         
     	Mail::to($request->E_mail)->send(new SendMail($data));

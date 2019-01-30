@@ -48,13 +48,17 @@
             
             <div class="form-group">
             <label for="email" style="color:Azure;">Select Email</label><br>          
-            <select class="custom-select custom-select-lg mb-3">
-            <option selected>All</option>
-             @foreach($emails_list as $email)
-             <option value="{{$email->email}}">{{$email->email}}</option>
+            
+            
+
+            <select  class="custom-select custom-select-lg mb-3" id="email" name="E mail">
+            <option value="email">All</option>
+            @foreach($emails_list as $email)
+            <option value="{{$email->email}}">{{$email->email}}</option>
             @endforeach
-            </select>
-            </div>
+        </select>
+    </div>
+
  
             <div class="form-group">
             <label for="subject" style="color:Azure;">Subject</label>
@@ -65,14 +69,11 @@
             <label for="body" style="color:Azure;">Body</label>
             <textarea id="body" name="body" class="form-control"  style="width:700px;height:200px;"></textarea>
             </div>
-            
-            <div class="form-group">
-            <div class="custom-control custom-switch">
-            <input type="checkbox" class="custom-control-input" id="customSwitch1">
-            <label class="custom-control-label" for="customSwitch1" style="color:Azure;">Track</label>
+
+            <div align="right" class="checkDIV">
+            <label><input type="checkbox" name="checkbox" id="checkbox" />Track</label><br>
             </div>
-            </div>
-            
+
             <button type="submit" class="btn btn-primary btn-lg btn-block" style="color:Azure;">Create Campaign</button>
             
             </fieldset>
