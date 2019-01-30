@@ -10,7 +10,7 @@
                font-weight: 300;
                  height: 400vh;
                  text-align: center;
-                 background-image:  url("/images/img5.jpg");
+                 
                  
 
                 }  
@@ -33,8 +33,8 @@
             </div><br>
             <button type="submit" class="btn btn-primary btn-lg btn-block" >Add Email</button>
             
-          </fieldset>
         </form>
+      </fieldset>
     </body>
     </html>
 

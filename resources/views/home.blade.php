@@ -8,7 +8,7 @@
         <style>
             body{
                 text-align: center;
-                background-image: url("/images/img5.jpg");
+                
             }
         </style>
     

@@ -29,6 +29,10 @@ Route::get('/contactUs',function(){
 Route::get('/form','fetchController@index');
 Route::get('/add_email','emailController@index');
 Route::post('/store','emailController@store');
+Route::get('/admin', function () {
+    return view('admin');
+
+});
 
 
 Route::post('/create_campaign/send','mailController@send');
