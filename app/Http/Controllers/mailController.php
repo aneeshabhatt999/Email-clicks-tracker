@@ -22,7 +22,7 @@ class mailController extends Controller
         
          $user = new add_emails;
           $user->email = Input::get("email");
-          
+           
         
     	Mail::to($request->E_mail)->send(new SendMail($data));
         return back( )->with('success','Mail has been sent');

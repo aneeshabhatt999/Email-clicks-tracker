@@ -16,10 +16,10 @@
                 
                 
                 font-family: 'Italic', serif;
-                font-weight: 100;
+                font-weight: 200;
                 height: 100vh;
                 margin: 0;
-
+                background-image:  url("/images/img5.jpg");
             }
 
             .full-height {
@@ -47,6 +47,7 @@
             }
 
             .title {
+                color:Azure;
                 font-size: 90px;
             }
 
@@ -58,6 +59,7 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                color:Azure;
             }
 
             .m-b-md {
