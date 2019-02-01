@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace email_tracker\Http\Controllers;
 
 use Request;
-use App\add_emails;
+use email_tracker\add_emails;
 use Illuminate\Support\Facades\Input;
 
 class emailController extends Controller
@@ -36,6 +36,7 @@ class emailController extends Controller
      */
     public function store(Request $request)
     {
+
         $user = new add_emails;
         $user->email = Input::get("email");
         $user->save();

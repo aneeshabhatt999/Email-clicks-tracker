@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
         <title>Create Campaign</title>
 
         <style>
@@ -17,6 +18,12 @@
                  display: inline-block;
                  text-align: left;
                  }
+                 
+                     .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
         
         </style>
      
@@ -36,7 +43,7 @@
 @section('content')
 
         
-                <fieldset class="fieldset-auto-width">
+            
         <form action="{{ url('create_campaign/send')}}" method="post">
 
             {{csrf_field()}}
@@ -44,7 +51,8 @@
  
             <fieldset class="fieldset-auto-width">
 
-            <h1 >CREATE CAMPAIGN</h1>
+
+            <h1 <i style='font-size:24px' class='far'>&#xf0e0;</i> CREATE CAMPAIGN</h1>
             
             <div class="form-group">
             <label for="email" >Select Email</label><br>          

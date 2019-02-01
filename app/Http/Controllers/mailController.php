@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace email_tracker\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
-use App\Mail\SendMail;
+use email_tracker\Mail\SendMail;
 use Illuminate\Mail\Mailable;
-use App\add_emails;
+use email_tracker\add_emails;
 use Illuminate\Support\Facades\Input;
 
 

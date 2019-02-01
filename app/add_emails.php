@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace email_tracker;
 
 use Illuminate\Database\Eloquent\Model;
 
