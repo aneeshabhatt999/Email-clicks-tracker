@@ -10,34 +10,31 @@
 </head>
 <body>
 
-<div class="container">           
-  <table class="table table-bordered">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>Subject</th>
-        <th>Number of Opens</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john@example.com</td>
-      </tr>
-      <tr>
-        <td>Mary</td>
-        <td>Moe</td>
-        <td>mary@example.com</td>
-      </tr>
-      <tr>
-        <td>July</td>
-        <td>Dooley</td>
-        <td>july@example.com</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+@extends('layouts/layout_admin')
+<table class="table table-dark">
+  <thead>
+    <tr>
+      
+      <th scope="col">Recipient</th>
+      <th scope="col">Subject</th>
+      <th scope="col">Number of emails opened</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach($emails_list as $email)
+    <tr>
+      
+      <td>
+            {{$email->email}}<br>
+</td>
+            @endforeach
+      <td></td>
+      <td></td>
+    </tr>
+
+  </tbody>
+</table>
+
 
 </body>
 </html>
