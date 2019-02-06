@@ -4,8 +4,7 @@ namespace email_tracker;
 
 use Illuminate\Database\Eloquent\Model;
 
-class add_emails extends Model
+class count extends Model
 {
-	
-    protected $fillable =['email','count'];
+    protected $fillable =['count'];
 }

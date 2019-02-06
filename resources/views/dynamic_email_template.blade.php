@@ -1,7 +1,7 @@
-
 <p>{{ $data['body']}}</p> 
-@php
-if($data['checkbox']=="on")
-echo '<img src="https://coloredcow.com/wp-content/themes/ColoredCow/dist/img/internship_header.jpg" style="display: none;" />';
+@if($data['checkbox']=="on")
 
-@endphp
+<a href="{{ url('track')}}" method="post">
+<img src="https://coloredcow.com/wp-content/themes/ColoredCow/dist/img/internship_header.jpg"/>
+</a>
+@endif
