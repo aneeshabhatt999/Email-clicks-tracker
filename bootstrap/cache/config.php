@@ -202,6 +202,13 @@
     ),
     'prefix' => 'laravel_cache',
   ),
+  'constants' => 
+  array (
+    'ToBeReturn' => 
+    array (
+      'email' => '$request->E_mail',
+    ),
+  ),
   'database' => 
   array (
     'default' => 'mysql',

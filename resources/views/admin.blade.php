@@ -16,21 +16,32 @@
     <tr>
       
       <th scope="col">Recipient</th>
-      <th scope="col">Subject</th>
+      
       <th scope="col">Number of emails opened</th>
     </tr>
   </thead>
   <tbody>
-    @foreach($emails_list as $email)
+            
+
     <tr>
-      
-      <td>
+            
+       <td>
+                        @foreach($emails_list as $email)
+          
             {{$email->email}}<br>
-</td>
-            @endforeach
-      <td></td>
-      <td></td>
-    </tr>
+               @endforeach
+      </td>
+             <td>
+                        @foreach($emails_list as $count)
+          
+            {{$count->count}}<br>
+               @endforeach
+      </td>
+   
+ </tr>
+
+
+
 
   </tbody>
 </table>

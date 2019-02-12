@@ -8,6 +8,7 @@ use email_tracker\Mail\SendMail;
 use Illuminate\Mail\Mailable;
 use email_tracker\add_emails;
 use Illuminate\Support\Facades\Input;
+use DB;
 
 
 class mailController extends Controller
@@ -21,10 +22,14 @@ class mailController extends Controller
          );
         
          $user = new add_emails;
-         $user->email = Input::get("email");
-           
-        
-    	Mail::to($request->E_mail)->send(new SendMail($data));
+         
+         $email = Input::get("email");
+         
+
+  
+     
+    	Mail::to($request->E_mail)->send(new SendMail($data,$request->E_mail));
+
         return back( )->with('success','Mail has been sent');
         
     }

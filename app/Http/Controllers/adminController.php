@@ -11,7 +11,9 @@ class adminController extends Controller
 
     	$emails_list = DB::table('add_emails')
     	->groupBy('email')
+    	->groupBy('email')
     	->get();
     	return view('admin')->with('emails_list',$emails_list);
+
 }
 }
