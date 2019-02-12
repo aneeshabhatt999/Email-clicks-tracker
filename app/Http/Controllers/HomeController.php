@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace email_tracker\Http\Controllers;
 
 use Illuminate\Http\Request;
 

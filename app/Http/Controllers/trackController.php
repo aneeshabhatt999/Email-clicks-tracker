@@ -2,20 +2,27 @@
 
 namespace email_tracker\Http\Controllers;
 
-use Request;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
+use email_tracker\Mail\SendMail;
+use Illuminate\Mail\Mailable;
 use email_tracker\add_emails;
 use Illuminate\Support\Facades\Input;
+use DB;
 
-class emailController extends Controller
+
+class trackController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('add_email');
+
+             
+
     }
 
     /**
@@ -24,7 +31,7 @@ class emailController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create()
-    {
+    {        
         //
     }
 
@@ -34,14 +41,19 @@ class emailController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request,$email)
     {
+         $emails_list = DB::table('add_emails')
+        ->groupBy('email')
+        ->get();
+        $count = DB::table('add_emails')->pluck('count');
+                
 
-        $user = new add_emails;
-        $user->email = Input::get("email");
-        $user->save();
-        return ("data is saved");
+         DB::table('add_emails')->where('email',$email )->update(['count' => DB::raw('count + 1')]);
+     return('data is updated successfully');
+ 
     }
+
 
     /**
      * Display the specified resource.

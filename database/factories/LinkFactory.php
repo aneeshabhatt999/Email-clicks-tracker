@@ -2,7 +2,7 @@
 
 use Faker\Generator as Faker;
 
-$factory->define(App\Link::class, function (Faker $faker) {
+$factory->define(email_tracker\Link::class, function (Faker $faker) {
     return [
         //
     ];
@@ -13,7 +13,7 @@ use Faker\Generator as Faker;
 
 /* @var Illuminate\Database\Eloquent\Factory $factory */
 
-$factory->define(App\Link::class, function (Faker $faker) {
+$factory->define(email_tracker\Link::class, function (Faker $faker) {
     return [
         'title' => substr($faker->sentence(2), 0, -1),
         'url' => $faker->url,

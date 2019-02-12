@@ -1,28 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
+        <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' crossorigin='anonymous'>
         <title>Create Campaign</title>
 
-<link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
         <style>
+
             body{
      	         font-family: 'Italic', serif;
      	         font-size:20px;
      	         font-weight: 300;
                  height: 400vh;
                  text-align: center;
-                 
-                }  
+                 }  
 
             .fieldset-auto-width {
                  display: inline-block;
                  text-align: left;
                  }
-
+                 
+                     .sidenav {
+      padding-top: 20px;
+      background-color: #f1f1f1;
+      height: 100%;
+    }
+        
         </style>
      
     </head>
     <body>
+        
    @if($message= Session::get('success'))
    <div class="alert alert-success alert-block">
     <button type="button" class="close" data-dismiss="alert">x</button>
@@ -32,66 +39,56 @@
   
 @extends('layouts/layout_form')
 
+        
 @section('content')
-<div class="container">
-    
+
+        
+            
         <form action="{{ url('create_campaign/send')}}" method="post">
+
             {{csrf_field()}}
+
+ 
             <fieldset class="fieldset-auto-width">
-            <h1>CREATE CAMPAIGN</h1>
-            <div class="row">
-            <div class="col-25">
-            <label for="email">Select Email</label>
-            </div>
-            <div class="col-75">
-            <select id="email" name="E mail">
-                <option value="">Select email</option>
+
+
+            <h1 <i style='font-size:24px' class='far'>&#xf0e0;</i> CREATE CAMPAIGN</h1>
+            
+            <div class="form-group">
+            <label for="email" >Select Email</label><br>          
+            
+            
+
+            <select  class="custom-select custom-select-lg mb-3" id="email" name="E mail">
+            <option value="email">All</option>
             @foreach($emails_list as $email)
             <option value="{{$email->email}}">{{$email->email}}</option>
             @endforeach
         </select>
-            </div>
-            </div><br>
-            <div class="row">
-            <div class="col-25">
-            <label for="subject">Subject</label>
-            </div>
-            <div class="col-75">
-            <textarea id="subject" name="subject"  style="width:700px;height:60px;"></textarea>
-            </div>
-            </div><br>
-            <div class="row">
-            <div class="col-25">
-            <label for="body">Body</label>
-            </div>
-            <div class="col-75">
-          
-            <textarea id="body" name="body" style="width:700px;height:200px"></textarea>
+    </div>
 
-
-            </div>
-            </div><br>
-        
-
-
-            
-            <div align="right" class="checkDIV">
  
-            <label><input type="checkbox" onclick="myFunction()" />Track</label><br>
-            
-             </div>
-        
-            
-            <div class="row">
-            <input type="submit" value="Create campaign" style="width:130px;height:40px;">
+            <div class="form-group">
+            <label for="subject" >Subject</label>
+            <textarea id="subject" name="subject" class="form-control"  style="width:700px;height:60px;"></textarea>
             </div>
 
+            <div class="form-group">
+            <label for="body">Body</label>
+            <textarea id="body" name="body" class="form-control"  style="width:700px;height:200px;"></textarea>
+            </div>
+
+            <div align="right" class="checkDIV">
+            <label><input type="checkbox" name="checkbox" id="checkbox" />Track</label><br>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-lg btn-block" >Create Campaign</button>
             </fieldset>
-                
-     </form>
+            
+        </form>
+    
 
-
-     </div>
 @endsection
-    </body>
+
+</body>
 </html>   

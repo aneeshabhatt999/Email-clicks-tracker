@@ -29,6 +29,11 @@ Route::get('/contactUs',function(){
 Route::get('/form','fetchController@index');
 Route::get('/add_email','emailController@index');
 Route::post('/store','emailController@store');
+Route::get('/track/{email}','trackController@store');
+
+Route::get('/admin', 'adminController@index');
+
+
 
 
 Route::post('/create_campaign/send','mailController@send');
@@ -38,4 +43,5 @@ Route::get('/activate-account/{token}','GuestController@verify')->name('activate
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
 

@@ -16,10 +16,10 @@
                 
                 
                 font-family: 'Italic', serif;
-                font-weight: 100;
+                font-weight: 200;
                 height: 100vh;
                 margin: 0;
-
+                background-image:  url("/images/img5.jpg");
             }
 
             .full-height {
@@ -47,6 +47,7 @@
             }
 
             .title {
+                color:Azure;
                 font-size: 90px;
             }
 
@@ -58,6 +59,7 @@
                 letter-spacing: .1rem;
                 text-decoration: none;
                 text-transform: uppercase;
+                color:Azure;
             }
 
             .m-b-md {
@@ -71,7 +73,7 @@
             @if (Route::has('login'))
                 <div class="top-right links">
                     @auth
-                        <a href="{{ url('/home') }}">Home</a>
+                        <a href="{{ url('/form') }}">Home</a>
                     @else
                         <a href="{{ route('login') }}">Login</a>
                         <a href="{{ route('register') }}">Register</a>
@@ -81,7 +83,7 @@
 
             <div class="content">
                 <div class="title m-b-md">
-                    An E-mail Tracking App 
+                    Email Clicks Tracker
                 </div>
 
                 <div class="links">

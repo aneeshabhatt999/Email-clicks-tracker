@@ -19,5 +19,6 @@
   <body>
     <h1>ABOUT</h1>
     <p>This is an e mail tracking app.Using this app we can determine whether the person to whom we have sent any message has seen it or not.</p>
+    
   </body>
 </html>

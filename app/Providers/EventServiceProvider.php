@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Providers;
+namespace email_tracker\Providers;
 
 use Illuminate\Support\Facades\Event;
 use Illuminate\Foundation\Support\Providers\EventServiceProvider as ServiceProvider;
@@ -13,8 +13,8 @@ class EventServiceProvider extends ServiceProvider
      * @var array
      */
     protected $listen = [
-        'App\Events\Event' => [
-            'App\Listeners\EventListener',
+        'email_tracker\Events\Event' => [
+            'email_tracker\Listeners\EventListener',
         ],
     ];
 
