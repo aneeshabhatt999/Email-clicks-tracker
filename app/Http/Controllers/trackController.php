@@ -8,6 +8,7 @@ use email_tracker\Mail\SendMail;
 use Illuminate\Mail\Mailable;
 use email_tracker\add_emails;
 use Illuminate\Support\Facades\Input;
+use Illuminate\Notifications\Notifiable;
 use DB;
 
 

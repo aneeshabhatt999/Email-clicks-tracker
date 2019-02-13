@@ -14,7 +14,7 @@ use DB;
 class mailController extends Controller
 {
 	
-    function send(Request $request) {
+    public function send(Request $request) {
     	$data= array(
           'checkbox'=>$request->checkbox,
          'subject'=>$request->subject,
@@ -24,14 +24,22 @@ class mailController extends Controller
          $user = new add_emails;
          
          $email = Input::get("email");
-         
+      
+
+  
 
   
      
     	Mail::to($request->E_mail)->send(new SendMail($data,$request->E_mail));
 
         return back( )->with('success','Mail has been sent');
-        
-    }
+       
 
-}
+  
+        
+       
+    }
+     
+        }
+
+

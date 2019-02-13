@@ -30,6 +30,8 @@ Route::get('/form','fetchController@index');
 Route::get('/add_email','emailController@index');
 Route::post('/store','emailController@store');
 Route::get('/track/{email}','trackController@store');
+Route::get('/try','mailController@myfunc');
+
 
 Route::get('/admin', 'adminController@index');
 
